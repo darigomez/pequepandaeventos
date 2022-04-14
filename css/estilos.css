@@ -1,0 +1,363 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Bebas Neue', cursive;
+	font-weight: 300;
+	background-color: white;
+	font-size: 20px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+p {
+	color: white;
+}
+
+h1 {
+	color: white;
+	font-size: 30px;
+}
+
+.contenedor {
+	width: 90%;
+	max-width: 120em;
+	margin: 1.25em auto;
+	display: grid;
+	grid-gap: 1.25em;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(4, auto);
+	grid-template-areas:
+		'header			header   	header'
+		'destacado		destacado 	destacado'
+		'contenido		contenido 	aside'
+		'footer	 		footer 		footer';
+}
+
+/* ---------- HEADER ----------*/
+.header {
+	grid-area: header;
+	padding: 1.25em;
+	background: #f683c3;
+	box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+	border-radius: 15px;
+}
+
+.header .logo {
+	margin-bottom: 1.25em;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 3px;
+}
+
+.logoimagen {
+	width: 4.25rem;
+}
+
+.menu {
+	border-top: 1px solid #ffff;
+	border-bottom: 1px solid #ffff;
+	display: flex;
+	justify-content: space-between;
+}
+
+.menu a {
+	padding: 0.625em;
+	color: #ffff;
+	display: block;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 400;
+	width: 100%;
+	text-align: center;
+	transition: 0.2s ease all;
+	font-size: 2em;
+}
+
+.menu a:hover {
+	background: #fa389f;
+	color: #fff;
+}
+
+/* ---------- Articulos ----------*/
+.articulo {
+	display: flex;
+	background: #fff;
+	box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+	background-color: #f683c3;
+	border-radius: 15px;
+}
+
+.articulo .contenedor-texto {
+	padding: 1.25em;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.articulo .contenedor-thumbnail {
+	width: 50%;
+}
+
+.articulo .titulo {
+	margin-bottom: 0.625rem;
+	font-size: 2.56em;
+}
+
+.articulo .titulo a {
+	font-weight: 400;
+	color: white;
+}
+
+.articulo .extracto {
+	font-size: 1.70em;
+	font-family: 'Big Shoulders Display', cursive;
+	line-height: 2rem; 
+	font-weight: 300;
+	margin-bottom: 1.25rem; 
+	color: white;
+}
+
+/* ---------- Articulo Destacado ----------*/
+.articulo.destacado {
+	grid-area: destacado;
+	color: white;
+	background-color: #f683c3;
+	box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+
+	display: grid;
+	grid-template-columns: 1.3fr 1fr;
+}
+
+.articulo.destacado .contenedor-thumbnail {
+	min-height: 100%;
+	width: 100%;
+}
+
+.articulo.destacado .contenedor-thumbnail a {
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+}
+
+.destacado .titulo a {
+	color: #fff;
+}
+
+.destacado .titulo::after {
+	content: '';
+	margin: 0.625em 0; 
+	display: block;
+	background-color: white;
+	width: 6em; 
+	height: 1px;
+}
+
+.btn-link {
+	color: white;
+	cursor: pointer;
+	display: inline-block;
+	padding: 0.625em; 
+	background-color: #f7b4dd;
+	font-size: 1em; 
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	align-self: flex-end;
+}
+
+.btn-link:hover {
+	background: #fa389f;
+	text-decoration: none;
+}
+
+/*---------- CONTENIDO ----------*/
+.contenido {
+	grid-area: contenido;
+	display: grid;
+	grid-template-columns: 1;
+	grid-gap: 1.25rem;
+}
+
+/*---------- SIDEBAR ----------*/
+.sidebar {
+	padding: 5em 1.56em; 
+	border-radius: 16px;
+	text-align: center;
+	min-height: 6.25rem; 
+	grid-area: aside;
+	background: #f683c3;
+	color: white;
+	box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+}
+
+.sidebar .acerca-de img {
+	border-radius: 100%;
+	height: 10em; 
+	width: 10em; 
+	margin-bottom: 1.56em; 
+}
+
+.sidebar .bio {
+	margin-bottom: 1.56em; 
+	font-size: 1.25em; 
+	line-height: 1.56em; 
+}
+
+.sidebar .menu {
+	width: 100%;
+	display: inline-block;
+	background: white;
+}
+
+.sidebar .menu a {
+	padding: 1.56rem; 
+	color: white;
+	background-color: #f683c3;
+	display: block;
+	font-size: 2em;
+	text-transform: uppercase;
+}
+
+.sidebar .menu a:hover {
+	background: #fa389f;
+}
+
+/*---------- FORMULARIO ----------*/
+
+form {
+    background-color: white;
+    width: 94%;
+    margin: 1rem;
+    max-width: 643.53px;
+    border-radius: 1rem;
+    padding: 3.5em 1.5em;
+}
+
+
+.articulo .tituloformulario {
+	font-size: 2.56em;
+}
+.form__container {
+    width: 100%;
+    display: grid;
+    gap: 1em;
+    grid-auto-columns: 100%;
+}
+.form__input {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 20px;
+    padding: .8em 1em;
+    line-height: 1.6px;
+    outline: none;
+    border: none;
+    border: 1px solid #f683c3;
+    border-radius: 13px;
+}
+.form__input--message {
+    resize: none;
+    padding: 2.8em 1em;
+    margin-bottom: .5em;
+}
+.form__cta {
+    font-family: 'Bebas Neue', cursive;
+    background-color: #f683c3;
+    color: white;
+    border: #fa389f;
+    font-weight: 300;
+    padding: .7em 0;
+    border-radius: 13px;
+    cursor: pointer;
+}
+
+.articulo .videoinstagram {
+	width: 300px;
+}
+
+/*--  Mapa  --*/
+
+.map-responsive{
+    overflow:hidden;
+    padding-bottom: 1000px;
+    position:relative;
+	height:0;
+}
+
+.map-responsive iframe{
+	left:0;
+	top:0;
+	height:100%;
+	width:100%;
+	position:absolute;
+}
+
+/*---------- FOOTER ----------*/
+.contenedor .footer {
+	background: #f683c3;
+	border-radius: 16px;
+	font-size: 1.55em;
+	grid-area: footer;
+	padding: 1.5625rem; 
+	text-align: right;
+	line-height: 1.6;
+	box-shadow: 0px 0px 70px rgba(102, 102, 102, 0.2);
+}
+
+/*--  large devices, desktops, 1200px y +  --*/
+@media (max-width: 1200px) {
+	body {
+		font-size: 14px;
+	}
+}
+
+/*--  large devices desktops, 992px y +  --*/
+@media (max-width: 992px) {
+	body {
+		font-size: 16px;
+	}
+
+	.contenedor {
+		grid-template-areas:
+			'header			header   	header'
+			'destacado		destacado 	destacado'
+			'contenido		contenido 	contenido'
+			'aside  		aside    	aside'
+			'footer	 		footer 		footer';
+	}
+}
+
+/*--  medium devices, tablets, 768px y +  --*/
+@media (max-width: 768px) {
+	.articulo.destacado {
+		grid-template-columns: 1fr;
+	}
+
+	body {
+		font-size: 12px;
+	}
+
+}
+
+/*--  small devices, phones, 576px y +  --*/
+@media (max-width: 576px) {
+	body {
+		font-size: 12px;
+	}
+
+	.menu a {
+		font-size: 1.5em;
+	}
+}
